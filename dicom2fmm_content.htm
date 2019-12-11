@@ -1,0 +1,284 @@
+﻿<!DOCTYPE HTML>
+<html><head>
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+<!-- This line includes the general project style sheet (not required) -->
+   <link type="text/css" href="styles.css" rel="stylesheet">
+
+<!-- This block defines the styles of the TOC headings, change them as needed -->
+<style type="text/css">
+       a { color: black; text-decoration: none }
+       a:visited {color: black}
+       a:hover { text-decoration: underline }
+       .navtitle    { font-size: 14pt; font-weight: bold; margin-bottom: 16px; }
+       .navbar      { font-size: 10pt; }
+       span#navsearch {display: none;}
+
+.heading1 { font-size: 10pt; color: #000000; text-decoration: none; }
+.heading2 { font-size: 10pt; color: #000000; text-decoration: none; }
+.heading3 { font-size: 10pt; color: #000000; text-decoration: none; }
+.heading4 { font-size: 10pt; color: #000000; text-decoration: none; }
+.heading5 { font-size: 10pt; color: #000000; text-decoration: none; }
+.heading6 { font-size: 10pt; color: #000000; text-decoration: none; }
+
+.hilight1 { font-size: 10pt; color: #FFFFFF; background: #004101; text-decoration: none; }
+.hilight2 { font-size: 10pt; color: #FFFFFF; background: #004101; text-decoration: none; }
+.hilight3 { font-size: 10pt; color: #FFFFFF; background: #004101; text-decoration: none; }
+.hilight4 { font-size: 10pt; color: #FFFFFF; background: #004101; text-decoration: none; }
+.hilight5 { font-size: 10pt; color: #FFFFFF; background: #004101; text-decoration: none; }
+.hilight6 { font-size: 10pt; color: #FFFFFF; background: #004101; text-decoration: none; }
+
+/* TOC LIST CSS */
+#toc    { padding:0; margin:0 }
+#toc li { margin-top:2px; margin-left:0px; padding:1px; }
+#toc ul { padding-left:0; margin-left:-16px; }
+/* TOC LIST CSS */
+
+</style>
+<!--[if lt IE 7]>
+<style type="text/css">
+ html {padding: 0; margin: 0;overflow-x: hidden;}
+ body { margin: 0; padding: 15px 0 0 10px;} 
+</style> 
+<![endif]-->
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript">
+     var parentScope = (parent.hmNavigationFrame);
+     if (!parentScope) {
+		      var s = document.createElement("script");
+		      s.setAttribute("type","text/javascript");
+		      s.setAttribute("src", "helpman_navigation.js");
+		      document.getElementsByTagName("head")[0].appendChild(s);
+	    }
+     else {
+       if (initialtocstate != "expandall") parent.hmAddCss(document, "#toc li ul { display: none }");
+     }
+     function loadicons() { var icons = new Array(); for (i=0; i<arguments.length; i++) { icons[i] = new Image(); icons[i].src = arguments[i]; } }
+     function loadtoc() { if (parentScope) parent.loadstate(document.getElementById("toc")); else loadstate(document.getElementById("toc")); }
+     function savetoc() { if (parentScope) parent.savestate(document.getElementById("toc")); else savestate(document.getElementById("toc")); }
+     function clicked(node, event) { deselect(); if (parentScope) parent.hmNodeClicked(node, event); else hmNodeClicked(node, event); }
+     function dblclicked(node) { if (parentScope) parent.hmNodeDblclicked(node); else hmNodeDblclicked(node); }
+     function deselect() { if (window.getSelection) window.getSelection().removeAllRanges(); else if (document.selection) document.selection.empty(); }
+     $(document).ready(function(){
+       loadtoc();
+       $(window).onunload = savetoc;
+     });
+   </script>
+</head>
+<body style="background-color: #FFFFFF; background-image: url(lines.gif); ">
+<p class="navtitle">&nbsp;</p>
+<p class="navbar">
+<b>Contents</b>&nbsp;|&nbsp;<a href="dicom2fmm_kwindex.htm">Index</a>&nbsp;
+<span id="navsearch">|&nbsp;<a href="dicom2fmm_ftsearch.htm">Search</a></span>
+<hr size="1" />
+
+<!-- Placeholder for the TOC - this variable is REQUIRED! -->
+<ul id="toc" style="list-style-type:none;display:block;padding-left:0">
+<li class="heading1" id="i1" style="background:url(button_topic.gif) no-repeat;padding-left:34px" onclick="return clicked(this,event)"><a class="heading1" id="a1" href="basicinfo.htm" target="hmcontent"><span class="heading1" id="s1">Введение</span></a>
+</li>
+<li class="heading1" id="i2" data-bg="button_closedbook.gif;button_openbook.gif" style="background:url(button_openbook.gif) no-repeat;cursor:pointer;padding-left:34px" onclick="return clicked(this,event)"><a class="heading1" id="a2" href="installprog.htm" target="hmcontent"><span class="heading1" id="s2" ondblclick="return dblclicked(this)">Установка и запуск программы</span></a>
+<ul id="ul2" style="list-style-type:none">
+<li class="heading2" id="i2.1" style="background:url(button_topic.gif) no-repeat;padding-left:34px" onclick="return clicked(this,event)"><a class="heading2" id="a2.1" href="systemreq.htm" target="hmcontent"><span class="heading2" id="s2.1">Системные требования</span></a>
+</li>
+<li class="heading2" id="i2.2" style="background:url(button_topic.gif) no-repeat;padding-left:34px" onclick="return clicked(this,event)"><a class="heading2" id="a2.2" href="installprogram.htm" target="hmcontent"><span class="heading2" id="s2.2">Установка программы</span></a>
+</li>
+<li class="heading2" id="i2.3" style="background:url(button_topic.gif) no-repeat;padding-left:34px" onclick="return clicked(this,event)"><a class="heading2" id="a2.3" href="configall.htm" target="hmcontent"><span class="heading2" id="s2.3">Конфигурация системы</span></a>
+</li>
+<li class="heading2" id="i2.4" style="background:url(button_topic.gif) no-repeat;padding-left:34px" onclick="return clicked(this,event)"><a class="heading2" id="a2.4" href="configdb.htm" target="hmcontent"><span class="heading2" id="s2.4">Конфигурация базы данных</span></a>
+</li>
+<li class="heading2" id="i2.5" style="background:url(button_topic.gif) no-repeat;padding-left:34px" onclick="return clicked(this,event)"><a class="heading2" id="a2.5" href="configexe.htm" target="hmcontent"><span class="heading2" id="s2.5">Конфигурационный файл программы</span></a>
+</li>
+<li class="heading2" id="i2.6" data-bg="button_closedbook.gif;button_openbook.gif" style="background:url(button_openbook.gif) no-repeat;cursor:pointer;padding-left:34px" onclick="return clicked(this,event)"><a class="heading2" id="a2.6" href="quickstart.htm" target="hmcontent"><span class="heading2" id="s2.6" ondblclick="return dblclicked(this)">Запуск программы</span></a>
+<ul id="ul2.6" style="list-style-type:none">
+<li class="heading3" id="i2.6.1" style="background:url(button_topic.gif) no-repeat;padding-left:34px" onclick="return clicked(this,event)"><a class="heading3" id="a2.6.1" href="planstart.htm" target="hmcontent"><span class="heading3" id="s2.6.1">Запуск из-под программы «Рабочее место медицинского физика»</span></a>
+</li>
+<li class="heading3" id="i2.6.2" style="background:url(button_topic.gif) no-repeat;padding-left:34px" onclick="return clicked(this,event)"><a class="heading3" id="a2.6.2" href="cmdlinestart.htm" target="hmcontent"><span class="heading3" id="s2.6.2">Запуск программы из командной строки</span></a>
+</li>
+<li class="heading3" id="i2.6.3" style="background:url(button_topic.gif) no-repeat;padding-left:34px" onclick="return clicked(this,event)"><a class="heading3" id="a2.6.3" href="standalonestart.htm" target="hmcontent"><span class="heading3" id="s2.6.3">Запуск программы с помощью ярлыков</span></a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="heading1" id="i3" data-bg="button_closedbook.gif;button_openbook.gif" style="background:url(button_openbook.gif) no-repeat;cursor:pointer;padding-left:34px" onclick="return clicked(this,event)"><a class="heading1" id="a3" href="introduction.htm" target="hmcontent"><span class="heading1" id="s3" ondblclick="return dblclicked(this)">Основные понятия</span></a>
+<ul id="ul3" style="list-style-type:none">
+<li class="heading2" id="i3.1" style="background:url(button_topic.gif) no-repeat;padding-left:34px" onclick="return clicked(this,event)"><a class="heading2" id="a3.1" href="dicom_rt.htm" target="hmcontent"><span class="heading2" id="s3.1">Стандарт DICOM</span></a>
+</li>
+<li class="heading2" id="i3.2" style="background:url(button_topic.gif) no-repeat;padding-left:34px" onclick="return clicked(this,event)"><a class="heading2" id="a3.2" href="fmmfile.htm" target="hmcontent"><span class="heading2" id="s3.2">FMM файл</span></a>
+</li>
+<li class="heading2" id="i3.3" style="background:url(button_topic.gif) no-repeat;padding-left:34px" onclick="return clicked(this,event)"><a class="heading2" id="a3.3" href="datfile.htm" target="hmcontent"><span class="heading2" id="s3.3">DAT файл</span></a>
+</li>
+<li class="heading2" id="i3.4" style="background:url(button_topic.gif) no-repeat;padding-left:34px" onclick="return clicked(this,event)"><a class="heading2" id="a3.4" href="hm_contour.htm" target="hmcontent"><span class="heading2" id="s3.4">Программа оконтуривания</span></a>
+</li>
+<li class="heading2" id="i3.5" data-bg="button_closedbook.gif;button_openbook.gif" style="background:url(button_openbook.gif) no-repeat;cursor:pointer;padding-left:34px" onclick="return clicked(this,event)"><a class="heading2" id="a3.5" href="geometry.htm" target="hmcontent"><span class="heading2" id="s3.5" ondblclick="return dblclicked(this)">Геометрия и система координат томограммы</span></a>
+<ul id="ul3.5" style="list-style-type:none">
+<li class="heading3" id="i3.5.1" style="background:url(button_topic.gif) no-repeat;padding-left:34px" onclick="return clicked(this,event)"><a class="heading3" id="a3.5.1" href="planes.htm" target="hmcontent"><span class="heading3" id="s3.5.1">Анатомические плоскости</span></a>
+</li>
+<li class="heading3" id="i3.5.2" style="background:url(button_topic.gif) no-repeat;padding-left:34px" onclick="return clicked(this,event)"><a class="heading3" id="a3.5.2" href="voxels.htm" target="hmcontent"><span class="heading3" id="s3.5.2">Нумерация вокслей</span></a>
+</li>
+<li class="heading3" id="i3.5.3" style="background:url(button_topic.gif) no-repeat;padding-left:34px" onclick="return clicked(this,event)"><a class="heading3" id="a3.5.3" href="orient.htm" target="hmcontent"><span class="heading3" id="s3.5.3">Ориентация положения пациента</span></a>
+</li>
+</ul>
+</li>
+<li class="heading2" id="i3.6" data-bg="button_closedbook.gif;button_openbook.gif" style="background:url(button_openbook.gif) no-repeat;cursor:pointer;padding-left:34px" onclick="return clicked(this,event)"><a class="heading2" id="a3.6" href="spr_units.htm" target="hmcontent"><span class="heading2" id="s3.6" ondblclick="return dblclicked(this)">Система единиц FMM томограммы</span></a>
+<ul id="ul3.6" style="list-style-type:none">
+<li class="heading3" id="i3.6.1" style="background:url(button_topic.gif) no-repeat;padding-left:34px" onclick="return clicked(this,event)"><a class="heading3" id="a3.6.1" href="linear.htm" target="hmcontent"><span class="heading3" id="s3.6.1">Linear преобразование</span></a>
+</li>
+<li class="heading3" id="i3.6.2" style="background:url(button_topic.gif) no-repeat;padding-left:34px" onclick="return clicked(this,event)"><a class="heading3" id="a3.6.2" href="hm_schneider.htm" target="hmcontent"><span class="heading3" id="s3.6.2">Schneider преобразование</span></a>
+</li>
+<li class="heading3" id="i3.6.3" style="background:url(button_topic.gif) no-repeat;padding-left:34px" onclick="return clicked(this,event)"><a class="heading3" id="a3.6.3" href="hm_heeteak.htm" target="hmcontent"><span class="heading3" id="s3.6.3">Heeteak преобразование</span></a>
+</li>
+<li class="heading3" id="i3.6.4" style="background:url(button_topic.gif) no-repeat;padding-left:34px" onclick="return clicked(this,event)"><a class="heading3" id="a3.6.4" href="hm_file.htm" target="hmcontent"><span class="heading3" id="s3.6.4">Калибровочный файл</span></a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="heading1" id="i4" data-bg="button_closedbook.gif;button_openbook.gif" style="background:url(button_openbook.gif) no-repeat;cursor:pointer;padding-left:34px" onclick="return clicked(this,event)"><a class="heading1" id="a4" href="dat2fmm.htm" target="hmcontent"><span class="heading1" id="s4" ondblclick="return dblclicked(this)">Создание FMM на основе DAT файла</span></a>
+<ul id="ul4" style="list-style-type:none">
+<li class="heading2" id="i4.1" data-bg="button_closedbook.gif;button_openbook.gif" style="background:url(button_openbook.gif) no-repeat;cursor:pointer;padding-left:34px" onclick="return clicked(this,event)"><a class="heading2" id="a4.1" href="dat2fmmgui.htm" target="hmcontent"><span class="heading2" id="s4.1" ondblclick="return dblclicked(this)">Описание элементов окна программы</span></a>
+<ul id="ul4.1" style="list-style-type:none">
+<li class="heading3" id="i4.1.1" style="background:url(button_topic.gif) no-repeat;padding-left:34px" onclick="return clicked(this,event)"><a class="heading3" id="a4.1.1" href="dat2fmmribbon.htm" target="hmcontent"><span class="heading3" id="s4.1.1">Панель инструментов</span></a>
+</li>
+<li class="heading3" id="i4.1.2" style="background:url(button_topic.gif) no-repeat;padding-left:34px" onclick="return clicked(this,event)"><a class="heading3" id="a4.1.2" href="hm_fmmdat.htm" target="hmcontent"><span class="heading3" id="s4.1.2">Просмотрщик томограмм</span></a>
+</li>
+<li class="heading3" id="i4.1.3" style="background:url(button_topic.gif) no-repeat;padding-left:34px" onclick="return clicked(this,event)"><a class="heading3" id="a4.1.3" href="hm_fmmdatdiff.htm" target="hmcontent"><span class="heading3" id="s4.1.3">Панель сравнения томограмм</span></a>
+</li>
+</ul>
+</li>
+<li class="heading2" id="i4.2" data-bg="button_closedbook.gif;button_openbook.gif" style="background:url(button_openbook.gif) no-repeat;cursor:pointer;padding-left:34px" onclick="return clicked(this,event)"><a class="heading2" id="a4.2" href="dicomdatfusion.htm" target="hmcontent"><span class="heading2" id="s4.2" ondblclick="return dblclicked(this)">Процедура совмещения DICOM-DAT томограмм</span></a>
+<ul id="ul4.2" style="list-style-type:none">
+<li class="heading3" id="i4.2.1" style="background:url(button_topic.gif) no-repeat;padding-left:34px" onclick="return clicked(this,event)"><a class="heading3" id="a4.2.1" href="dathistdiff.htm" target="hmcontent"><span class="heading3" id="s4.2.1">Сравнение томограмм</span></a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="heading1" id="i5" data-bg="button_closedbook.gif;button_openbook.gif" style="background:url(button_openbook.gif) no-repeat;cursor:pointer;padding-left:34px" onclick="return clicked(this,event)"><a class="heading1" id="a5" href="dicom2fmm.htm" target="hmcontent"><span class="heading1" id="s5" ondblclick="return dblclicked(this)">Создание FMM на основе DICOM</span></a>
+<ul id="ul5" style="list-style-type:none">
+<li class="heading2" id="i5.1" style="background:url(button_topic.gif) no-repeat;padding-left:34px" onclick="return clicked(this,event)"><a class="heading2" id="a5.1" href="dicom2fmmgui.htm" target="hmcontent"><span class="heading2" id="s5.1">Графический интерфейс</span></a>
+</li>
+</ul>
+</li>
+<li class="heading1" id="i6" data-bg="button_closedbook.gif;button_openbook.gif" style="background:url(button_openbook.gif) no-repeat;cursor:pointer;padding-left:34px" onclick="return clicked(this,event)"><a class="heading1" id="a6" href="da2fmmtcontour.htm" target="hmcontent"><span class="heading1" id="s6" ondblclick="return dblclicked(this)">Редактор контуров</span></a>
+<ul id="ul6" style="list-style-type:none">
+<li class="heading2" id="i6.1" data-bg="button_closedbook.gif;button_openbook.gif" style="background:url(button_openbook.gif) no-repeat;cursor:pointer;padding-left:34px" onclick="return clicked(this,event)"><a class="heading2" id="a6.1" href="contourexe.htm" target="hmcontent"><span class="heading2" id="s6.1" ondblclick="return dblclicked(this)">Типы контуров</span></a>
+<ul id="ul6.1" style="list-style-type:none">
+<li class="heading3" id="i6.1.1" style="background:url(button_topic.gif) no-repeat;padding-left:34px" onclick="return clicked(this,event)"><a class="heading3" id="a6.1.1" href="hm_ignorecntr.htm" target="hmcontent"><span class="heading3" id="s6.1.1">Игнорировать</span></a>
+</li>
+<li class="heading3" id="i6.1.2" style="background:url(button_topic.gif) no-repeat;padding-left:34px" onclick="return clicked(this,event)"><a class="heading3" id="a6.1.2" href="hm_patientcntr.htm" target="hmcontent"><span class="heading3" id="s6.1.2">Пациент</span></a>
+</li>
+<li class="heading3" id="i6.1.3" style="background:url(button_topic.gif) no-repeat;padding-left:34px" onclick="return clicked(this,event)"><a class="heading3" id="a6.1.3" href="hm_tumorcntr.htm" target="hmcontent"><span class="heading3" id="s6.1.3">Опухоль (мишень)</span></a>
+</li>
+<li class="heading3" id="i6.1.4" style="background:url(button_topic.gif) no-repeat;padding-left:34px" onclick="return clicked(this,event)"><a class="heading3" id="a6.1.4" href="hm_roircntr.htm" target="hmcontent"><span class="heading3" id="s6.1.4">Зона интереса</span></a>
+</li>
+<li class="heading3" id="i6.1.5" style="background:url(button_topic.gif) no-repeat;padding-left:34px" onclick="return clicked(this,event)"><a class="heading3" id="a6.1.5" href="hm_criticalcntr.htm" target="hmcontent"><span class="heading3" id="s6.1.5">Критический орган</span></a>
+</li>
+<li class="heading3" id="i6.1.6" style="background:url(button_topic.gif) no-repeat;padding-left:34px" onclick="return clicked(this,event)"><a class="heading3" id="a6.1.6" href="hm_criticaldosecntr.htm" target="hmcontent"><span class="heading3" id="s6.1.6">Критический орган с допустимой дозой</span></a>
+</li>
+<li class="heading3" id="i6.1.7" style="background:url(button_topic.gif) no-repeat;padding-left:34px" onclick="return clicked(this,event)"><a class="heading3" id="a6.1.7" href="hm_criticalpadcntr.htm" target="hmcontent"><span class="heading3" id="s6.1.7">Критическая зона с отступом (не используется)</span></a>
+</li>
+<li class="heading3" id="i6.1.8" style="background:url(button_topic.gif) no-repeat;padding-left:34px" onclick="return clicked(this,event)"><a class="heading3" id="a6.1.8" href="hm_criticaldosepadcntr.htm" target="hmcontent"><span class="heading3" id="s6.1.8">Критическая зона с дозой и отступом (не используется)</span></a>
+</li>
+<li class="heading3" id="i6.1.9" style="background:url(button_topic.gif) no-repeat;padding-left:34px" onclick="return clicked(this,event)"><a class="heading3" id="a6.1.9" href="hm_targetincntr.htm" target="hmcontent"><span class="heading3" id="s6.1.9">Мишень внутри опухоли</span></a>
+</li>
+</ul>
+</li>
+<li class="heading2" id="i6.2" style="background:url(button_topic.gif) no-repeat;padding-left:34px" onclick="return clicked(this,event)"><a class="heading2" id="a6.2" href="contouredit.htm" target="hmcontent"><span class="heading2" id="s6.2">Выбор типа контура</span></a>
+</li>
+<li class="heading2" id="i6.3" style="background:url(button_topic.gif) no-repeat;padding-left:34px" onclick="return clicked(this,event)"><a class="heading2" id="a6.3" href="doseedit.htm" target="hmcontent"><span class="heading2" id="s6.3">Редактирование дозы в опухоли</span></a>
+</li>
+</ul>
+</li>
+<li class="heading1" id="i7" data-bg="button_closedbook.gif;button_openbook.gif" style="background:url(button_openbook.gif) no-repeat;cursor:pointer;padding-left:34px" onclick="return clicked(this,event)"><a class="heading1" id="a7" href="hm_dicomviewer.htm" target="hmcontent"><span class="heading1" id="s7" ondblclick="return dblclicked(this)">Просмотрщик томограмм</span></a>
+<ul id="ul7" style="list-style-type:none">
+<li class="heading2" id="i7.1" data-bg="button_closedbook.gif;button_openbook.gif" style="background:url(button_openbook.gif) no-repeat;cursor:pointer;padding-left:34px" onclick="return clicked(this,event)"><a class="heading2" id="a7.1" href="hm_planar.htm" target="hmcontent"><span class="heading2" id="s7.1" ondblclick="return dblclicked(this)">Просмотр плоских изображений</span></a>
+<ul id="ul7.1" style="list-style-type:none">
+<li class="heading3" id="i7.1.1" style="background:url(button_topic.gif) no-repeat;padding-left:34px" onclick="return clicked(this,event)"><a class="heading3" id="a7.1.1" href="hm_plane.htm" target="hmcontent"><span class="heading3" id="s7.1.1">Просмотр изображений</span></a>
+</li>
+<li class="heading3" id="i7.1.2" style="background:url(button_topic.gif) no-repeat;padding-left:34px" onclick="return clicked(this,event)"><a class="heading3" id="a7.1.2" href="replay.htm" target="hmcontent"><span class="heading3" id="s7.1.2">Проигрыватель изображений</span></a>
+</li>
+<li class="heading3" id="i7.1.3" style="background:url(button_topic.gif) no-repeat;padding-left:34px" onclick="return clicked(this,event)"><a class="heading3" id="a7.1.3" href="hm_topic.htm" target="hmcontent"><span class="heading3" id="s7.1.3">Масштабирование.</span></a>
+</li>
+<li class="heading3" id="i7.1.4" style="background:url(button_topic.gif) no-repeat;padding-left:34px" onclick="return clicked(this,event)"><a class="heading3" id="a7.1.4" href="zoom.htm" target="hmcontent"><span class="heading3" id="s7.1.4">Лупа. Перемещение.</span></a>
+</li>
+<li class="heading3" id="i7.1.5" style="background:url(button_topic.gif) no-repeat;padding-left:34px" onclick="return clicked(this,event)"><a class="heading3" id="a7.1.5" href="hm_bright.htm" target="hmcontent"><span class="heading3" id="s7.1.5">Изменение яркости-контрастности</span></a>
+</li>
+<li class="heading3" id="i7.1.6" style="background:url(button_topic.gif) no-repeat;padding-left:34px" onclick="return clicked(this,event)"><a class="heading3" id="a7.1.6" href="hm_value.htm" target="hmcontent"><span class="heading3" id="s7.1.6">Измерения</span></a>
+</li>
+</ul>
+</li>
+<li class="heading2" id="i7.2" data-bg="button_closedbook.gif;button_openbook.gif" style="background:url(button_openbook.gif) no-repeat;cursor:pointer;padding-left:34px" onclick="return clicked(this,event)"><a class="heading2" id="a7.2" href="hm_mpr.htm" target="hmcontent"><span class="heading2" id="s7.2" ondblclick="return dblclicked(this)">Мультипланарная реконструкция (МПР)</span></a>
+<ul id="ul7.2" style="list-style-type:none">
+<li class="heading3" id="i7.2.1" style="background:url(button_topic.gif) no-repeat;padding-left:34px" onclick="return clicked(this,event)"><a class="heading3" id="a7.2.1" href="hm_mprview.htm" target="hmcontent"><span class="heading3" id="s7.2.1">Элементы представления МПР</span></a>
+</li>
+<li class="heading3" id="i7.2.2" data-bg="button_closedbook.gif;button_openbook.gif" style="background:url(button_openbook.gif) no-repeat;cursor:pointer;padding-left:34px" onclick="return clicked(this,event)"><a class="heading3" id="a7.2.2" href="hm_mprplanes.htm" target="hmcontent"><span class="heading3" id="s7.2.2" ondblclick="return dblclicked(this)">Работа с ортогональными плоскостями</span></a>
+<ul id="ul7.2.2" style="list-style-type:none">
+<li class="heading4" id="i7.2.2.1" style="background:url(button_topic.gif) no-repeat;padding-left:34px" onclick="return clicked(this,event)"><a class="heading4" id="a7.2.2.1" href="3dcursor.htm" target="hmcontent"><span class="heading4" id="s7.2.2.1">Режим 3D-курсора</span></a>
+</li>
+<li class="heading4" id="i7.2.2.2" style="background:url(button_topic.gif) no-repeat;padding-left:34px" onclick="return clicked(this,event)"><a class="heading4" id="a7.2.2.2" href="mprnavigator.htm" target="hmcontent"><span class="heading4" id="s7.2.2.2">Режим МПР навигатора</span></a>
+</li>
+</ul>
+</li>
+<li class="heading3" id="i7.2.3" style="background:url(button_topic.gif) no-repeat;padding-left:34px" onclick="return clicked(this,event)"><a class="heading3" id="a7.2.3" href="hm_histos.htm" target="hmcontent"><span class="heading3" id="s7.2.3">Гистограммы срезов</span></a>
+</li>
+</ul>
+</li>
+<li class="heading2" id="i7.3" style="background:url(button_topic.gif) no-repeat;padding-left:34px" onclick="return clicked(this,event)"><a class="heading2" id="a7.3" href="hm_gallery.htm" target="hmcontent"><span class="heading2" id="s7.3">Режим просмотра &quot;Галерея&quot;</span></a>
+</li>
+</ul>
+</li>
+<li class="heading1" id="i8" style="background:url(button_topic.gif) no-repeat;padding-left:34px" onclick="return clicked(this,event)"><a class="heading1" id="a8" href="finish.htm" target="hmcontent"><span class="heading1" id="s8">Завершение программы</span></a>
+</li>
+<li class="heading1" id="i9" data-bg="button_closedbook.gif;button_openbook.gif" style="background:url(button_openbook.gif) no-repeat;cursor:pointer;padding-left:34px" onclick="return clicked(this,event)"><a class="heading1" id="a9" href="datinfo.htm" target="hmcontent"><span class="heading1" id="s9" ondblclick="return dblclicked(this)">Информация о входных-выходных данных</span></a>
+<ul id="ul9" style="list-style-type:none">
+<li class="heading2" id="i9.1" style="background:url(button_topic.gif) no-repeat;padding-left:34px" onclick="return clicked(this,event)"><a class="heading2" id="a9.1" href="patientdb.htm" target="hmcontent"><span class="heading2" id="s9.1">Информация о пациенте</span></a>
+</li>
+<li class="heading2" id="i9.2" style="background:url(button_topic.gif) no-repeat;padding-left:34px" onclick="return clicked(this,event)"><a class="heading2" id="a9.2" href="fmminfo.htm" target="hmcontent"><span class="heading2" id="s9.2">Параметры выходного FMM файла</span></a>
+</li>
+<li class="heading2" id="i9.3" style="background:url(button_topic.gif) no-repeat;padding-left:34px" onclick="return clicked(this,event)"><a class="heading2" id="a9.3" href="dicomdump.htm" target="hmcontent"><span class="heading2" id="s9.3">Печать тэгов входных DICOM файлов</span></a>
+</li>
+</ul>
+</li>
+<li class="heading1" id="i10" style="background:url(button_topic.gif) no-repeat;padding-left:34px" onclick="return clicked(this,event)"><a class="heading1" id="a10" href="print.htm" target="hmcontent"><span class="heading1" id="s10">Печать. Экспорт изображений</span></a>
+</li>
+<li class="heading1" id="i11" data-bg="button_closedbook.gif;button_openbook.gif" style="background:url(button_openbook.gif) no-repeat;cursor:pointer;padding-left:34px" onclick="return clicked(this,event)"><a class="heading1" id="a11" href="help.htm" target="hmcontent"><span class="heading1" id="s11" ondblclick="return dblclicked(this)">Справочная система и помощь пользователю</span></a>
+<ul id="ul11" style="list-style-type:none">
+<li class="heading2" id="i11.1" style="background:url(button_topic.gif) no-repeat;padding-left:34px" onclick="return clicked(this,event)"><a class="heading2" id="a11.1" href="html.htm" target="hmcontent"><span class="heading2" id="s11.1">Электронная справочная система</span></a>
+</li>
+<li class="heading2" id="i11.2" style="background:url(button_topic.gif) no-repeat;padding-left:34px" onclick="return clicked(this,event)"><a class="heading2" id="a11.2" href="tooltips.htm" target="hmcontent"><span class="heading2" id="s11.2">Всплывающие подсказки</span></a>
+</li>
+<li class="heading2" id="i11.3" style="background:url(button_topic.gif) no-repeat;padding-left:34px" onclick="return clicked(this,event)"><a class="heading2" id="a11.3" href="messages.htm" target="hmcontent"><span class="heading2" id="s11.3">Сообщения, выдаваемые программой</span></a>
+</li>
+<li class="heading2" id="i11.4" style="background:url(button_topic.gif) no-repeat;padding-left:34px" onclick="return clicked(this,event)"><a class="heading2" id="a11.4" href="error.htm" target="hmcontent"><span class="heading2" id="s11.4">Ошибки программы и их исправление</span></a>
+</li>
+</ul>
+</li>
+<li class="heading1" id="i12" style="background:url(button_topic.gif) no-repeat;padding-left:34px" onclick="return clicked(this,event)"><a class="heading1" id="a12" href="hotkeys.htm" target="hmcontent"><span class="heading1" id="s12">&quot;Горячие клавиши&quot;</span></a>
+</li>
+<li class="heading1" id="i13" data-bg="button_closedbook.gif;button_openbook.gif" style="background:url(button_openbook.gif) no-repeat;cursor:pointer;padding-left:34px" onclick="return clicked(this,event)"><a class="heading1" id="a13" href="hm_faq.htm" target="hmcontent"><span class="heading1" id="s13" ondblclick="return dblclicked(this)">Часто задаваемые вопросы</span></a>
+<ul id="ul13" style="list-style-type:none">
+<li class="heading2" id="i13.1" style="background:url(button_topic.gif) no-repeat;padding-left:34px" onclick="return clicked(this,event)"><a class="heading2" id="a13.1" href="diffdicom-dat.htm" target="hmcontent"><span class="heading2" id="s13.1">DICOM-DAT томограммы не совпали. Что делать?</span></a>
+</li>
+</ul>
+</li>
+</ul>
+<script type="text/javascript">loadicons('button_topic.gif','button_openbook.gif','button_closedbook.gif');</script>
+
+<hr size="1" /><p><span style="font-size: 8px">&nbsp;</span></p>
+<script type="text/javascript">
+document.getElementById("navsearch").style.display="inline";
+</script> 
+</body>
+</html>
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,180 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+   <title>Создание FMM на основе DAT файла</title>
+   <meta name="generator" content="Help & Manual">
+   <meta name="keywords" content="Создание FMM файла">
+   <meta name="description" content="Создание FMM на основе DAT файла">
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <link type="text/css" href="styles.css" rel="stylesheet">
+   <link type="text/css" href="custom.css" rel="stylesheet">
+   <script type="text/javascript" src="nsh.js"></script>
+
+<script type="text/javascript">   
+// Toggle Toggler 
+
+var toggleCount=false;
+var switchState;
+
+function toggleToggles() {
+
+    if (!toggleCount) {
+     toggleCount = true;
+     HMToggleExpandAll(true);
+     switchState = true;
+     }
+   
+     else if (switchState) {
+        HMToggleExpandAll(false);
+        switchState = false;
+        }
+        
+     else  {
+        HMToggleExpandAll(true);
+        switchState = true;
+        } 
+    }
+</script>
+   
+<!-- non-scrolling headers for CHM and browser-based help, local styles-->
+<style type="text/css" media="screen"> 
+html, body {    
+      margin:0; 
+      padding:0; 
+      overflow: hidden; 
+      background: #FFFFFF; 
+   }
+ 
+div#printheader { 
+   display: none;
+   }
+   #idheader { 
+      width:100%; 
+      height:auto; 
+      padding: 0; 
+      margin: 0; 
+} 
+    #idheaderbg  {
+    background: #6F6F6F; 
+}
+   #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+   #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+   #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+   #callout-table a {text-decoration: none; color: blue;}
+   #callout-table a:visited {text-decoration: none; color: blue;}
+   #overview-table a {text-decoration: none; color: black;}
+   #overview-table a:visited {text-decoration: none; color: black;}
+   #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}
+   p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+   </style>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+<style type="text/css" media="print">
+span.f_Heading1 { color: black; }
+#idheader, #printheader img { display:none; }
+#printheader { display: block; margin-top: 20px; }
+#idcontent { margin-top: 10px; }
+</style>   
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "dat2fmm.htm");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body>
+<!--ZOOMSTOP-->
+
+<div id="printheader"><h1 class="p_Heading1"><span class="f_Heading1">Создание FMM на основе DAT файла</span></h1>
+</div>
+<div id="idheader">
+<div id="idheaderbg">
+<table width="100%" border="0" cellspacing="0" cellpadding="0" 
+       style="margin: 0px; background: url(header_bg.jpg);">
+
+  <tr valign="bottom">
+    <td align="left" valign="bottom" class="topichead">
+   <p class="crumbs" id="idnav"><b>Navigation:</b>&nbsp;
+   &raquo;No topics above this level&laquo;
+   </p>
+   <h1 class="p_Heading1"><span class="f_Heading1">Создание FMM на основе DAT файла</span></h1>
+
+    </td>
+    <td align="right" width="120" valign="middle" class="topichead" id="idnav">
+    
+     <a href="hm_file.htm"
+        onmouseover="document.images.prev.src='btn_prev_h.gif'" 
+        onmouseout="document.images.prev.src='btn_prev_n.gif'"
+        ><img name=prev src="btn_prev_n.gif" border=0 alt="Previous page"
+        ></a><a href="basicinfo.htm"
+        onmouseover="document.images.main.src='btn_home_h.gif'" 
+        onmouseout="document.images.main.src='btn_home_n.gif'"><img name=main src="btn_home_n.gif" border=0 alt="Return to chapter overview"
+        ></a><a href="dat2fmmgui.htm"
+        onmouseover="document.images.next.src='btn_next_h.gif'" 
+        onmouseout="document.images.next.src='btn_next_n.gif'"><img name=next src="btn_next_n.gif" border=0 alt="Next page"
+        ></a>
+    </td>
+  </tr>
+  <tr><td colspan="2" style="height: 3px; background: url(header_bg_shadow.gif)"></td></tr>
+</table>
+</div>
+
+<!-- The following code displays Expand All/Collapse All links  below the header in topics containing toggles -->
+  
+
+</div>  
+
+
+
+<div id="idcontent"><div id="innerdiv"> 
+<!--ZOOMRESTART-->
+<p style="text-indent: 15px; margin: 0px 0px 10px 0px;">В процессе создания FMM на основе DAT файла происходит следующая последовательность действий:</p>
+<p style="text-align: left; padding: 0px 0px 0px 18px; margin: 0px 0px 10px 0px;"><span style="font-size:16px; font-family: 'Arial';color:#000000;display:inline-block;width:18px;margin-left:-18px">1.</span>Загрузка DICOM томограммы с контурами полученной после <a href="hm_contour.htm" class="topiclink">программы оконтуривания</a></p><p style="text-indent: 13px; margin: 0px 0px 10px 0px;">Эта DICOM томограмма является производной томограммой полученной после серии преобразований  <a href="datfile.htm" class="topiclink">DAT файла</a>:</p>
+<p style="text-align: left; padding: 0px 0px 0px 13px; margin: 0px 0px 10px 28px;"><span style="font-size:16px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span> поворота на 90 градусов в <a href="geometry.htm" class="topiclink">аксиальной плоскости</a></p><p style="text-align: left; padding: 0px 0px 0px 13px; margin: 0px 0px 10px 28px;"><span style="font-size:16px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span> зеркального отражаниня в вертикальном направлении в <a href="geometry.htm" class="topiclink">аксиальной плоскости</a></p><p style="text-align: left; padding: 0px 0px 0px 13px; margin: 0px 0px 10px 28px;"><span style="font-size:16px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span><a href="linear.htm" class="topiclink">линейного преобразования</a> величин DAT томограммы (<span class="f_BodyText">единиц </span><span class="f_BodyText" style="font-weight: bold; color: #000080;">SPR</span><span class="f_BodyText">) в <a href="dicom_rt.htm" class="topiclink">единицы &nbsp;Хаунсфилда</a> (</span><span class="f_BodyText" style="font-weight: bold; color: #000080;">HU</span><span class="f_BodyText">)</span></p><p style="text-align: left; padding: 0px 0px 0px 13px; margin: 0px 0px 10px 28px;"><span style="font-size:16px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span>вторичного преобразования DICOM томограммы (на основе DAT файла) во время процедуры <a href="hm_contour.htm" class="topiclink">оконтуривания</a></p><p style="margin: 0px 0px 10px 0px;"><span style="font-size: 13px;">2.  </span>Загрузка исходного <a href="datfile.htm" class="topiclink">DAT файла</a> из которого была получена предыдущая томограмма. <br />
+ &nbsp; &nbsp;Большое количество преобразований и операций, описанные выше (пункт 1.), могут приводить к ошибкам округления и прочим погрешностям.  </p>
+<p style="margin: 0px 0px 10px 0px;"> &nbsp; &nbsp;Во время оконтуривания входная DICOM томограмма может быть повернута в пространстве. </p>
+<p style="margin: 0px 0px 10px 0px;"> &nbsp; &nbsp;Поэтому входной томограммой для создания FMM является исходная <a href="datfile.htm" class="topiclink">DAT томограмма</a>, </p>
+<p style="margin: 0px 0px 10px 0px;"> &nbsp; &nbsp;на которую накладываются контура полученные после <a href="hm_contour.htm" class="topiclink">программы оконтуривания</a>.</p>
+<p style="margin: 0px 0px 10px 0px;">3. <a href="da2fmmtcontour.htm" class="topiclink">Редактирование контуров</a></p>
+<p style="margin: 0px 0px 10px 0px;">4. <a href="dicomdatfusion.htm" class="topiclink">Совмещение DICOM, DAT томограмм</a></p>
+<p style="margin: 0px 0px 10px 0px;">5. <a href="dat2fmm.htm" class="topiclink">Создание FMM на основе DAT файла</a></p>
+<p style="margin: 0px 0px 10px 0px;">6. <a href="finish.htm" class="topiclink">Завершение программы с записью результата в базу данных</a></p>
+<p class="p_BodyText" style="text-indent: -4px; margin: 0px 0px 10px 63px;"><span class="f_BodyText">&nbsp;</span></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+var lastSlashPos = document.URL.lastIndexOf("/") > document.URL.lastIndexOf("\\") ? document.URL.lastIndexOf("/") : document.URL.lastIndexOf("\\");
+if( document.URL.substring(lastSlashPos + 1, lastSlashPos + 4).toLowerCase() != "~hh" )
+{
+ if (document.all) setTimeout(function() {nsrInit();},20); 
+    else nsrInit();
+ } 
+
+
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
